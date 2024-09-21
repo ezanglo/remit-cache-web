@@ -32,7 +32,7 @@ export default function FeaturesSection() {
 	return (
 		<motion.section
 			id="features"
-			className="scroll-mt-28 mb-28 sm:mb-40 max-w-3xl mx-auto"
+			className="scroll-mt-28 mt-28 mb-28 sm:mb-40 max-w-3xl mx-auto"
 			initial={{opacity: 0}}
 			whileInView={{opacity: 1}}
 			transition={{
@@ -42,7 +42,7 @@ export default function FeaturesSection() {
 			<h2 className="text-3xl text-center font-extrabold sm:text-4xl md:text-5xl">
 				Features
 			</h2>
-			<div className="grid grid-cols-1 md:grid-cols-2 relative z-10 py-10">
+			<div className="grid grid-cols-1 md:grid-cols-2 relative z-10 md:py-10">
 				{features.map((feature, index) => (
 					<FeatureCard key={feature.title} {...feature} index={index}/>
 				))}

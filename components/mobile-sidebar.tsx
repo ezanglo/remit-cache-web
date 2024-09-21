@@ -1,7 +1,9 @@
 'use client'
 
+import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { DiscordLogoIcon } from "@radix-ui/react-icons";
 import { MenuIcon, Package2Icon } from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -30,7 +32,7 @@ export default function MobileSidebar() {
             className="flex items-center gap-2 text-lg font-semibold"
             onClick={() => setIsOpen(false)}
           >
-            <Package2Icon className="h-6 w-6" />
+            <Package2Icon className="h-6 w-6"/>
             <span className="sr-only">RemitCache</span>
           </Link>
           {navItems.map((item) => (
@@ -43,6 +45,14 @@ export default function MobileSidebar() {
               {item.name}
             </Link>
           ))}
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="icon">
+              <Link href="https://discord.gg/Vyrj7ZSnxg" target="_blank">
+                <DiscordLogoIcon/>
+              </Link>
+            </Button>
+            <ModeToggle/>
+          </div>
         </nav>
       </SheetContent>
     </Sheet>

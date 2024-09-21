@@ -40,7 +40,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="scroll-smooth px-10">{children}</main>
+          <main className="scroll-smooth px-5 md:px-10">{children}</main>
           <Footer />
         </ThemeProvider>
         <TailwindIndicator />
