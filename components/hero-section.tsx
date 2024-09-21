@@ -24,7 +24,7 @@ export default function HeroSection() {
 		>
 			<div
 				className="absolute z-10 pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
-			<BackgroundBeamsWithCollision>
+			<BackgroundBeamsWithCollision className="h-[90vh] items-start pt-20 sm:pt-0">
 				<motion.div
 					initial={{opacity: 0, x: -50}}
 					animate={{opacity: 1, x: 0}}
