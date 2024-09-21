@@ -52,7 +52,7 @@ export function JoinWaitlistDialog({email}: { email?: string }) {
 			if (error) {
 				toast.error(error);
 			} else {
-				toast.success("Email sent successfully!");
+				toast.success("You have successfully joined the waitlist!");
 				form.reset();
 				setIsOpen(false);
 			}
