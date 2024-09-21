@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -40,7 +41,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="scroll-smooth px-5 md:px-10">{children}</main>
+          <main className="scroll-smooth px-5 md:px-10">
+	          {children}
+					</main>
           <Footer />
         </ThemeProvider>
         <TailwindIndicator />
@@ -55,6 +58,7 @@ export default function RootLayout({
 						}
 					}}
 				/>
+        <Analytics />
       </body>
     </html>
   );
