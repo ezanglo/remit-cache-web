@@ -20,7 +20,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "RemitCache",
+  title: {
+    default: "RemitCache",
+    template: `%s | RemitCache`,
+  },
   description: "Streamline your money transfers and receive instant notifications for budget updates and transfer activities",
   keywords: "remittance, cache, financial technology, transactions, budget, savings",
   openGraph: {
