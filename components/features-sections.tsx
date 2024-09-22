@@ -2,14 +2,21 @@
 
 import { FeatureCard } from "@/components/feature-card";
 import { motion } from 'framer-motion'
-import { BellIcon, HistoryIcon, NotepadText, ScanLineIcon } from "lucide-react";
+import { BellIcon, HistoryIcon, NotepadText } from "lucide-react";
+import Image from "next/image";
 import React from 'react'
 
 const features = [
 	{
 		title: 'Receipt OCR',
 		description: 'Easily scan and store receipts from money transfers, allowing you to manage your finances with just a snapshot.',
-		icon: <ScanLineIcon/>,
+		icon: <Image
+			src="/logo.svg"
+			alt="RemitCache"
+			className="dark:invert size-5"
+			width={25}
+			height={25}
+		/>,
 	},
 	{
 		title: 'Transaction History',

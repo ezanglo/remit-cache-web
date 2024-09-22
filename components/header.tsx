@@ -2,6 +2,7 @@
 
 import { DiscordLogoIcon } from '@radix-ui/react-icons'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { JoinWaitlistDialog } from './join-waitlist-dialog'
@@ -20,7 +21,14 @@ export default function Header() {
 		>
 			<div className="flex items-center gap-5 sm:gap-10">
 				<MobileSidebar/>
-				<h1 className="text-xl font-extrabold cursor-pointer text-foreground">
+				<h1 className="flex items-center gap-2 text-xl font-extrabold cursor-pointer text-foreground">
+					<Image
+						src="/logo.svg"
+						alt="RemitCache"
+						className="dark:invert size-5"
+						width={25}
+						height={25}
+					/>
 					<Link href="/">RemitCache</Link>
 				</h1>
 				<NavHeader/>

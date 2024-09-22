@@ -4,6 +4,7 @@ import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-w
 import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils";
 import { motion } from 'framer-motion'
+import Image from "next/image";
 import React, { useState } from 'react'
 import { JoinWaitlistDialog } from './join-waitlist-dialog'
 
@@ -24,14 +25,21 @@ export default function HeroSection() {
 		>
 			<div
 				className="absolute z-10 pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
-			<BackgroundBeamsWithCollision className="h-[90vh] items-start pt-20 sm:pt-0">
+			<BackgroundBeamsWithCollision className="h-[90vh] items-start">
 				<motion.div
 					initial={{opacity: 0, x: -50}}
 					animate={{opacity: 1, x: 0}}
 					transition={{duration: 0.5, delay: 0.7}}
-					className="flex flex-col justify-center items-center space-y-4 py-24 md:py-52 z-20 w-full"
+					className="flex flex-col justify-center items-center space-y-4 py-24 md:py-40 z-20 w-full"
 				>
 					<div className="space-y-2 z-10">
+						<Image
+							src="/logo.svg"
+							alt="RemitCache"
+							className="dark:invert size-20 mx-auto my-5"
+							width={25}
+							height={25}
+						/>
 						<h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
 							Manage your transfers like never before!
 						</h1>
