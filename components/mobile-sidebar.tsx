@@ -34,13 +34,12 @@ export default function MobileSidebar() {
 						onClick={() => setIsOpen(false)}
 					>
 						<Image
-							src="/logo.svg"
+							src="/logo-name.png"
 							alt="RemitCache"
-							className="dark:invert size-5"
-							width={25}
-							height={25}
+							className="invert dark:invert-0 w-40"
+							width={3500}
+							height={500}
 						/>
-						<span className="sr-only">RemitCache</span>
 					</Link>
 					{navItems.map((item) => (
 						<Link

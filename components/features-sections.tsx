@@ -13,7 +13,7 @@ const features = [
 		icon: <Image
 			src="/logo.svg"
 			alt="RemitCache"
-			className="dark:invert size-5"
+			className="invert dark:invert-0 size-5 opacity-70"
 			width={25}
 			height={25}
 		/>,

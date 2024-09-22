@@ -22,14 +22,15 @@ export default function Header() {
 			<div className="flex items-center gap-5 sm:gap-10">
 				<MobileSidebar/>
 				<h1 className="flex items-center gap-2 text-xl font-extrabold cursor-pointer text-foreground">
-					<Image
-						src="/logo.svg"
-						alt="RemitCache"
-						className="dark:invert size-5"
-						width={25}
-						height={25}
-					/>
-					<Link href="/">RemitCache</Link>
+					<Link href="/">
+						<Image
+							src="/logo-name.png"
+							alt="RemitCache"
+							className="invert dark:invert-0 w-40"
+							width={3500}
+							height={500}
+						/>
+					</Link>
 				</h1>
 				<NavHeader/>
 			</div>

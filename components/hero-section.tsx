@@ -20,7 +20,7 @@ export default function HeroSection() {
 			transition={{duration: 0.5, delay: 0.2}}
 			className={cn(
 				"px-0 md:px-32 relative sm:mb-40 text-center max-w-5xl mx-auto",
-				"w-full bg-background bg-grid-white/[0.2]"
+				"w-full bg-background bg-grid-black/[0.2] dark:bg-grid-white/[0.2]"
 			)}
 		>
 			<div
@@ -34,11 +34,11 @@ export default function HeroSection() {
 				>
 					<div className="space-y-2 z-10">
 						<Image
-							src="/logo.svg"
+							src="/logo-name.png"
 							alt="RemitCache"
-							className="dark:invert size-20 mx-auto my-5"
-							width={25}
-							height={25}
+							className="invert dark:invert-0 w-40 mx-auto"
+							width={3500}
+							height={500}
 						/>
 						<h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
 							Manage your transfers like never before!
