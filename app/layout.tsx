@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import JsonLd from "@/components/JsonLd";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
@@ -69,8 +70,26 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RemitCache",
+    "url": "https://www.remitcache.com",
+    "description": "Streamline your money transfers and receive instant notifications for budget updates and transfer activities",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.remitcache.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <JsonLd data={jsonLd} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
