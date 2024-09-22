@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RemitCache Landing and Waitlist Page
+
+This is the web application for RemitCache, a platform for tracking and managing remittances across multiple channels.
 
 ## Getting Started
 
-First, run the development server:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-```bash
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm (v6 or later)
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/remit-cache-web.git
+   cd remit-cache-web
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the following:
+   ```
+   RESEND_API_KEY=your_resend_api_key_here
+   ```
+
+4. Set up Resend:
+   - Sign up for a Resend account at https://resend.com
+   - Obtain your API key from the Resend dashboard
+   - Add the API key to your `.env.local` file as shown above
+
+### Running the Development Server
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/`: Next.js app directory
+- `components/`: React components
+  - `ui/`: Reusable UI components
+- `actions/`: Server actions
+  - `send-email.ts`: Email sending functionality
+- `email/`: Email templates
+- `lib/`: Utility functions and helpers
+  - `utils.ts`: General utility functions
+- `public/`: Static assets (images, icons, etc.)
 
-## Learn More
+## Key Features
 
-To learn more about Next.js, take a look at the following resources:
+- Landing page with hero section, features, FAQ, and contact form
+- Email functionality for contact form and waitlist signup
+- Responsive design with dark mode support
+- Privacy Policy and Terms of Service pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Built With
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/) - The React framework for production
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [shadcn/ui](https://ui.shadcn.com/) - Re-usable components built with Radix UI and Tailwind CSS
+- [Aceternity UI](https://ui.aceternity.com/) - Modern UI components for React
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+- [Resend](https://resend.com/) - Email API for developers
+- [Framer Motion](https://www.framer.com/motion/) - A production-ready motion library for React
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is set up for easy deployment on Vercel. Connect your GitHub repository to Vercel for automatic deployments.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
